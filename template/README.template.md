@@ -1,6 +1,6 @@
 # {{name}}
 
-Ce projet est un monorepo JS, suivant l'architecture React-Express-MySQL telle qu'enseignée à la Wild Code School (v7.2.3) :
+Ce projet est un monorepo JS, suivant l'architecture React-Express-MySQL telle qu'enseignée à la Wild Code School (v7.2.4) :
 
 ```mermaid
 sequenceDiagram
@@ -54,6 +54,10 @@ Il est pré-configuré avec un ensemble d'outils pour aider les étudiants à pr
     - [REST](#rest)
     - [Autres Bonnes Pratiques](#autres-bonnes-pratiques)
   - [FAQ](#faq)
+    - [Installation avec Docker](#installation-avec-docker)
+      - [Mode développement](#mode-développement)
+      - [Installation de nouvelles dépendances](#installation-de-nouvelles-dépendances)
+      - [Accéder à la base de données](#accéder-à-la-base-de-données)
     - [Déploiement avec Traefik](#déploiement-avec-traefik)
     - [Variables d'environnement spécifiques](#variables-denvironnement-spécifiques)
     - [Logs](#logs)
