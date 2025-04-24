@@ -1,6 +1,6 @@
 # {{name}}
 
-Ce projet est un monorepo JS, suivant l'architecture React-Express-MySQL telle qu'enseignée à la Wild Code School (v7.2.3) :
+Ce projet est un monorepo JS, suivant l'architecture React-Express-MySQL telle qu'enseignée à la Wild Code School (v7.2.4) :
 
 ```mermaid
 sequenceDiagram
@@ -54,6 +54,10 @@ Il est pré-configuré avec un ensemble d'outils pour aider les étudiants à pr
     - [REST](#rest)
     - [Autres Bonnes Pratiques](#autres-bonnes-pratiques)
   - [FAQ](#faq)
+    - [Installation avec Docker](#installation-avec-docker)
+      - [Mode développement](#mode-développement)
+      - [Installation de nouvelles dépendances](#installation-de-nouvelles-dépendances)
+      - [Accéder à la base de données](#accéder-à-la-base-de-données)
     - [Déploiement avec Traefik](#déploiement-avec-traefik)
     - [Variables d'environnement spécifiques](#variables-denvironnement-spécifiques)
     - [Logs](#logs)
@@ -301,6 +305,38 @@ declare global {
   - Écrivez des tests pour toutes les fonctionnalités critiques.
 
 ## FAQ
+
+### Installation avec Docker
+> ⚠️ Prérequis : Vous devez avoir installé Docker et Docker Compose sur votre machine.  
+> Suivez les instructions ici : [Docker Installation](https://docs.docker.com/get-docker/).
+
+Lorsque Docker est installé et démarré, exécutez la commande suivante pour construire l'image Docker et démarrer les conteneurs :
+```bash
+docker compose up -d --build
+```
+La partie _client_ de l'application sera accessible à l'adresse http://localhost:3000 et la partie _serveur_ à l'adresse http://localhost:3310.  
+Pour arrêter et supprimer les conteneurs, exécutez :
+```bash
+docker compose down
+```
+
+#### Mode développement
+Les dépendances (du dossier `node_modules`) sont installées dans le conteneur Docker et ne seront pas visibles directement. Si vous utilisez un IDE comme VSCode et que vous souhaitez modifier des fichiers de votre application, vous devez installer les dépendances localement pour prévenir toute erreur de fichiers manquants.  
+```bash
+npm install
+```
+
+#### Installation de nouvelles dépendances
+Pour installer de nouvelles dépendances, procédez en local comme d'habitude avec `npm install <package-name>`, puis, synchronisez les dépendances dans le conteneur Docker avec la commande suivante :
+```bash
+docker compose exec web sh -c "npm install"
+```
+
+#### Accéder à la base de données
+Pour vous connecter à la base de données avec votre terminal, exécutez la commande suivante :
+```bash
+docker compose exec database sh -c "mysql -uuser -ppassword js_template_fullstack"
+```
 
 ### Déploiement avec Traefik
 

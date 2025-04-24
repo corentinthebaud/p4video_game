@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Open an issue](https://github.com/WildCodeSchool/create-js-monorepo/issues) if you have any request/feedback :)
 
+## [7.2.4] - 2025-04-24
+
+### Fixed
+
+- Fixed Docker files to be used in dev and prod. Thanks to [Jean-François Morin-Abdullah](https://github.com/jeanfrancois-morin) for the work.
+
 ## [7.2.3] - 2025-04-16
 
 ### Fixed
