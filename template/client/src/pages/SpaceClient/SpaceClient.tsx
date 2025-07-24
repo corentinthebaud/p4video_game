@@ -40,8 +40,8 @@ function SpaceClient() {
   if (!client) return <p>Client introuvable.</p>;
 
   return (
-    <div>
-      <section>
+    <div className="space-client">
+      <section className="info-client">
         <h1>Mon espace personnel</h1>
         <article>
           <p>Email : {client.email}</p>
@@ -51,7 +51,7 @@ function SpaceClient() {
 
         <section>
           <h2>Mes jeux-vidéos</h2>
-          <article>
+          <article className="my-favorite-game">
             {games.length > 0 ? (
               games.map((game) => (
                 <MyVideoGames

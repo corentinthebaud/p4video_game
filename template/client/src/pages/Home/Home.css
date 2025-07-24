@@ -1,0 +1,42 @@
+.home-page {
+  padding: 2rem;
+  background-color: #c6d0dd; /* ou #ffffff pour plus de clarté */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-home-page {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.section-home-page h1 {
+  font-size: 2rem;
+  color: #1b1919;
+  margin-bottom: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-video-game {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Optionnel : styles cohérents avec VideoGame component */
+.video-game-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.video-game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}

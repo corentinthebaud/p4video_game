@@ -12,11 +12,11 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <section>
+    <div className="home-page">
+      <section className="section-home-page">
         <h1>Les jeux vidéos enregistrés sur le site</h1>
 
-        <article>
+        <article className="home-video-game">
           {game.map((el) => (
             <VideoGame
               key={el.game_id}

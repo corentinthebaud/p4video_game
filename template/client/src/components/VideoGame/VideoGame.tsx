@@ -8,7 +8,7 @@ interface VideoGameProps {
 
 function VideoGame({ video_name, date_creation, type }: VideoGameProps) {
   return (
-    <section>
+    <section className="video-game-card">
       <figcaption>
         <h2>{video_name}</h2>
         <p>{date_creation}</p>

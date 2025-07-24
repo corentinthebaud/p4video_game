@@ -1,1 +1,52 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "lemon";
+  font-weight: 400;
+  font-style: normal;
+  src: url(./src/assets/fonts/Lemon-Regular.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "lemonada";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  src: url(./src/assets/fonts/Lemonada-VariableFont_wght.ttf) format(truetype);
+}
+
+:root {
+  --light-bg-bloc-color: rgba(217, 238, 244);
+  --light-bg-bloc-color-button: rgba(227, 222, 246);
+  --light-text-color: rgba(30, 30, 30);
+  --font-family-body: "lemonada", sans-serif;
+  --font-family-title: "lemon", sans-serif;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+#root {
+  height: 100vh;
+}
